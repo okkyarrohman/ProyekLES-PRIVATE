@@ -388,9 +388,7 @@
 
 <body class="antialiased">
 
-
-    <h1>okeokeokeoke</h1>
-
+    <H2>OKKEEEEEEEEEEEEEE</H2>
 
 
     <!-- Login dan regist -->
