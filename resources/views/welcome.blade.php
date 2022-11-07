@@ -388,7 +388,6 @@
 
 <body class="antialiased">
 
-    <H2>OKKEEEEEEEEEEEEEE</H2>
 
 
     <!-- Login dan regist -->
