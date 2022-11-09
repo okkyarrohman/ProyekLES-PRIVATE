@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\MuridController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Admin\Datamurid\Show;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 
 /*
@@ -16,8 +18,28 @@ use App\Http\Livewire\Admin\Datamurid\Show;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layouts/index-admin');
 });
+
+Route::get('/home', function () {
+    return view('layouts/index-admin');
+});
+
+Route::get('/admin-dashboard', function () {
+    return view('admin/dashboard');
+});
+
+Route::get('/admin-pendataan', function () {
+    return view('admin/pendataan');
+});
+
+Route::get('/dashboard', function () {
+    return view('admin/dashboard');
+});
+
+
+
+
 
 Route::middleware([
     'auth:sanctum',
@@ -30,3 +52,5 @@ Route::middleware([
 });
 
 route::get('/datamurid', Show::class);
+
+route::get('/admin-datamurid',[MuridController::class,'show']);
