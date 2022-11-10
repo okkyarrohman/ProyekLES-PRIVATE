@@ -10,4 +10,8 @@
             </ol>
         </nav>
     </div><!-- End Page Title -->
+
+    <h1 class="text-3xl font-bold underline">
+        Hello world!
+    </h1>
 @endsection

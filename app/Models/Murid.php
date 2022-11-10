@@ -13,8 +13,9 @@ class Murid extends Model
     protected $fillable = 
     [
         'name',
-        'email',
         'phone',
+        'sekolah',
+        'umur',
     ];
 
     use HasFactory;

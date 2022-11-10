@@ -8,6 +8,12 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   scroll-behavior: smooth;
 }

@@ -101,7 +101,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/admin/datamurid">
+                        <a href="/admin-datamurid">
                             <i class="bi bi-circle"></i><span>Data Murid</span>
                         </a>
                     </li>
@@ -183,6 +183,10 @@
 
 
         @yield('admin')
+
+
+
+
 
         <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
                 class="bi bi-arrow-up-short"></i></a>

@@ -53,4 +53,10 @@ Route::middleware([
 
 route::get('/datamurid', Show::class);
 
-route::get('/admin-datamurid',[MuridController::class,'show']);
+route::get('/admin-datamurid',[MuridController::class,'ShowDatamurid']);
+route::get('/admin-datamurid',[MuridController::class,'TampilDatamurid']);
+
+route::post('/admin-datamurid',[MuridController::class,'AddDatamurid'])->name('murid_create');
+
+route::get('/admin-deletemurid/{id}',[MuridController::class,'HapusDatamurid']);
+
