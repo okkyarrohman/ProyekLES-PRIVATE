@@ -106,8 +106,8 @@
                         </a>
                     </li>
                     <li>
-                        <a href="components-badges.html">
-                            <i class="bi bi-circle"></i><span>Data Jadwal Bimbel</span>
+                        <a href="/admin-datamapel">
+                            <i class="bi bi-circle"></i><span>Data Mapel</span>
                         </a>
                     </li>
                     <li>

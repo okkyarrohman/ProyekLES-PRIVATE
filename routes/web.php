@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\MuridController;
+use App\Http\Controllers\MapelController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Admin\Datamurid\Show;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
@@ -51,12 +52,20 @@ Route::middleware([
     })->name('dashboard');
 });
 
-route::get('/datamurid', Show::class);
+route::get('/berita',function()
+{
+return view('general/berita');
+}
+);
 
-route::get('/admin-datamurid',[MuridController::class,'ShowDatamurid']);
+
+
+
+
+
+route::get('/admin-datamurid',[MuridController::class,'ShowDatamurid']); 
 route::get('/admin-datamurid',[MuridController::class,'TampilDatamurid']);
-
 route::post('/admin-datamurid',[MuridController::class,'AddDatamurid'])->name('murid_create');
-
 route::get('/admin-deletemurid/{id}',[MuridController::class,'HapusDatamurid']);
 
+route::get('/admin-datamapel',[MapelController::class,'ShowDatamapel']); 

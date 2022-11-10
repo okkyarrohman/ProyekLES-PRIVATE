@@ -108,8 +108,12 @@
                     <td>{{ $datamurid->phone }}</td>
                     <td>{{ $datamurid->sekolah }}</td>
                     <td>
-                        <a href="" class="btn btn-primary">Lihat Profile</a>
-                        <a href="/admin-deletemurid/{{ $datamurid->id }}" class="btn btn-danger">Hapus Akun</a>
+                        <a href="#" class="btn btn-primary">
+                            <i class="bi bi-people"></i>
+                        </a>
+                        <a href="/admin-deletemurid/{{ $datamurid->id }}" class="btn btn-danger">
+                            <i class="bi bi-file-excel"></i>
+                        </a>
                     </td>
                 </tr>
             @endforeach
