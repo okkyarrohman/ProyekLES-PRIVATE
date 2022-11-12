@@ -7,6 +7,8 @@ use App\Models\Murid;
 
 class MuridController extends Controller
 {
+
+    
     public function ShowDatamurid()
     {
         return view('admin.datamurid');

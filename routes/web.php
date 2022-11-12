@@ -19,11 +19,11 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 */
 
 Route::get('/', function () {
-    return view('layouts/index-admin');
+    return view('general/berita');
 });
 
-Route::get('/home', function () {
-    return view('layouts/index-admin');
+Route::get('/berita', function () {
+    return view('general/berita');
 });
 
 Route::get('/admin-dashboard', function () {
@@ -34,8 +34,8 @@ Route::get('/admin-pendataan', function () {
     return view('admin/pendataan');
 });
 
-Route::get('/dashboard', function () {
-    return view('admin/dashboard');
+Route::get('/profile', function () {
+    return view('profile/show');
 });
 
 
@@ -48,7 +48,7 @@ Route::middleware([
     'verified'
 ])->group(function () {
     Route::get('/dashboard', function () {
-        return view('dashboard');
+        return view('admin/dashboard');
     })->name('dashboard');
 });
 

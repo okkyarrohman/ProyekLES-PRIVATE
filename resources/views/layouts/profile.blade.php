@@ -151,39 +151,13 @@
 
 
 
-            <div
-                class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-                @if (Route::has('login'))
-                    <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                        @auth
-                            <a href="{{ url('/profile') }}" class="nav-link collapsed">
-                                <i class bi bi-card-list></i>
-                                Profile
-                            </a>
-                        @else
-                            <a href="{{ route('login') }}" class="nav-link collapsed">
-                                <i class bi bi-box-arrow-in-right></i>
-                                <span>Login</span>
-                            </a>
-
-                            @if (Route::has('register'))
-                                <a href="{{ route('register') }}"class="nav-link collapsed">
-                                    <i class bi bi-card-list></i>
-                                    <span>Register</span>
-                                </a>
-                            @endif
-                        @endauth
-                    </div>
-                @endif
-            </div>
-
     </aside><!-- End Sidebar-->
 
     <main id="main" class="main">
 
 
 
-        @yield('admin')
+        @yield('profile')
 
 
 

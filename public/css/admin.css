@@ -1,0 +1,20 @@
+
+.container-icon {
+    width: 600px;
+    height: 110px;
+    /*border: 2px solid; */
+    box-sizing: border-box;
+    display: flex;
+
+
+}
+
+
+
+.container-icon div {
+    width: 500px;
+    height: 50px;
+    margin: 10px;
+    display: flex;
+}
+

@@ -21,7 +21,7 @@
 
     <!-- Template Main CSS File -->
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/style.css') }}">
-
+    <link rel="stylesheet" type="text/css" href="{{ asset('/css/berita.css') }}">
 
     <!-- Vendor CSS Files -->
     <link href="{{ asset('css/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">

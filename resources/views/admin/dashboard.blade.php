@@ -11,7 +11,37 @@
         </nav>
     </div><!-- End Page Title -->
 
-    <h1 class="text-3xl font-bold underline">
-        Hello world!
-    </h1>
+    <!-- Menu Icon -->
+    <div class="container-icon">
+        <div class="icons-menu">
+            <div class="icon-group">
+                <div class="icon-satu">
+                    <button type="button" class="btn btn-primary">
+                        <i class="bi bi-bank"></i>
+                    </button>
+                </div>
+                <div class="icon-dua">
+                    <button type="button" class="btn btn-primary" ">
+                                    <i class="bi bi-bank"></i>
+                                </button>
+                            </div>
+                        <div class="icon-tiga">
+                            <button type="button" class="btn btn-primary">
+                                <i class="bi bi-bank"></i>
+                            </button>
+                        </div>
+                        <div class="icon-empat">
+                                <button type="button" class="btn btn-primary">
+                                    <i class="bi bi-bank"></i>
+                                </button>
+                            </div>
+                            <div class="icon-lima">
+                                <button type="button" class="btn btn-primary">
+                                    <i class="bi bi-alarm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <hr> <!-- End Icon Menu -->
 @endsection

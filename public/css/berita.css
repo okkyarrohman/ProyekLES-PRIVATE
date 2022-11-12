@@ -1,0 +1,10 @@
+.main-artikel{
+    width: 800;
+    margin: 80, auto;
+    border-collapse: 1px;
+    display: flex;
+}
+
+.main-artikel div {
+    margin: 5px;
+}

@@ -100,10 +100,12 @@
             </tr>
         </thead>
         <tbody>
-
+            @php
+                $no = 1;
+            @endphp
             @foreach ($murids as $datamurid)
                 <tr>
-                    <td>{{ $datamurid->id }}</td>
+                    <td>{{ $no++ }}</td>
                     <td>{{ $datamurid->name }}</td>
                     <td>{{ $datamurid->phone }}</td>
                     <td>{{ $datamurid->sekolah }}</td>
