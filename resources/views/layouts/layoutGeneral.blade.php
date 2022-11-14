@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>LES PRIVATE</title>
+    <title>TESTED</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -83,90 +83,11 @@
 
         <ul class="sidebar-nav" id="sidebar-nav">
 
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="/admin-dashboard">
-                    <i class="bi bi-grid"></i>
-                    <span>Dashboard</span>
-                </a>
-            </li><!-- End Dashboard Nav -->
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
-                    <i class="bi bi-menu-button-wide"></i><span>Pendataan</span><i
-                        class="bi bi-chevron-down ms-auto"></i>
-                </a>
-                <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-                    <li>
-                        <a href="components-alerts.html">
-                            <i class="bi bi-circle"></i><span>Data Tentor</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/admin-datamurid">
-                            <i class="bi bi-circle"></i><span>Data Murid</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/admin-datamapel">
-                            <i class="bi bi-circle"></i><span>Data Mapel</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="components-badges.html">
-                            <i class="bi bi-circle"></i><span>Data Jadwal Bimbel</span>
-                        </a>
-                    </li>
-                </ul>
-            </li><!-- End Pendataan Nav -->
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" data-bs-target="#keuangan-nav" data-bs-toggle="collapse" href="#">
-                    <i class="bi bi-menu-button-wide"></i><span>Keuangan</span><i
-                        class="bi bi-chevron-down ms-auto"></i>
-                </a>
-                <ul id="keuangan-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-                    <li>
-                        <a href="components-alerts.html">
-                            <i class="bi bi-circle"></i><span>Gaji Tutor</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="components-accordion.html">
-                            <i class="bi bi-circle"></i><span>Data Transaksi Pemesanan</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="components-accordion.html">
-                            <i class="bi bi-circle"></i><span>Paket Bimbel</span>
-                        </a>
-                    </li>
-                </ul>
-            </li><!-- End Keuangan Nav -->
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" data-bs-target="#tugas-nav" data-bs-toggle="collapse" href="#">
-                    <i class="bi bi-menu-button-wide"></i><span>Tugas</span><i class="bi bi-chevron-down ms-auto"></i>
-                </a>
-                <ul id="tugas-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-                    <li>
-                        <a href="components-alerts.html">
-                            <i class="bi bi-circle"></i><span>Tugas</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="components-accordion.html">
-                            <i class="bi bi-circle"></i><span>Materi</span>
-                        </a>
-                    </li>
-                </ul>
-            </li><!-- End Tugas Nav -->
 
             <br>
-
             <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#akun-nav" data-bs-toggle="collapse" href="#">
-                    <i class="bi bi-menu-button-wide"></i><span>Account</span><i
-                        class="bi bi-chevron-down ms-auto"></i>
+                    <i class="bi bi-menu-button-wide"></i><span>Account</span><i class="bi bi-chevron-down ms-auto"></i>
                 </a>
                 <ul id="akun-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                     <li>
@@ -194,10 +115,17 @@
                 </ul>
             </li><!-- End Akun Nav -->
 
+
     </aside><!-- End Sidebar-->
 
     <main id="main" class="main">
-        @yield('admin')
+
+
+
+        @yield('general')
+
+
+
 
 
         <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i

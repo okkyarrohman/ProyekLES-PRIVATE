@@ -1,5 +1,5 @@
-@extends('layouts.index-admin')
-@section('index-admin')
+@extends('layouts.layoutGeneral')
+@section('general')
     <div class="pagetitle">
         <h1>Berita</h1>
         <nav>

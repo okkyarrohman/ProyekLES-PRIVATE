@@ -86,12 +86,41 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="/berita">
                     <i class="bi bi-grid"></i>
-                    <span>Dashboard</span>
+                    <span>Berita</span>
                 </a>
+            </li><!-- End Berita Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#akun-nav" data-bs-toggle="collapse" href="#">
+                    <i class="bi bi-menu-button-wide"></i><span>Dashboard</span><i
+                        class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="akun-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li>
+                        @if ('role:admin')
+                            @auth
+                                <a href="{{ url('/admin-dashboard') }}" class="nav-link collapsed">
+                                    <i class bi bi-card-list></i>
+                                    Dashboard Admin
+                                </a>
+                                @if ('role:tentor')
+                                    <a href="{{ url('/tentor-dashboard') }}" class="nav-link collapsed">
+                                        <i class bi bi-card-list></i>
+                                        Dashboard Tentor
+                                    </a>
+                                @endif
+                                @if ('role:user')
+                                    <a href="{{ url('/user-dashboard') }}" class="nav-link collapsed">
+                                        <i class bi bi-card-list></i>
+                                        Dashboard User
+                                    </a>
+                                @endif
+                            @endauth
+                        @endif
+                    </li>
+                </ul>
             </li><!-- End Dashboard Nav -->
 
-
-            <li class="nav-heading">Account</li>
 
     </aside><!-- End Sidebar-->
 

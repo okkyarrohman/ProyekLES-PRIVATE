@@ -46,6 +46,10 @@ class LoginController extends Controller
             return redirect()->route('homeTentor');
         }
 
+        if ($user->hasRole('admin'))
+        {
+            return redirect()->route('homeAdmin');
+        }
 
         return redirect()->route('homeUser');
     }

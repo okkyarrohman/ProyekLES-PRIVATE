@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>TESTED</title>
+    <title>LES PRIVATE</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -91,33 +91,79 @@
             </li><!-- End Dashboard Nav -->
 
 
-            <br>
-            <li class="nav-heading">Account</li>
-            <div
-                class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-                @if (Route::has('login'))
-                    <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                        @auth
-                            <a href="{{ url('/profile') }}" class="nav-link collapsed">
-                                <i class bi bi-card-list></i>
-                                Profile
-                            </a>
-                        @else
-                            <a href="{{ route('login') }}" class="nav-link collapsed">
-                                <i class bi bi-box-arrow-in-right></i>
-                                <span>Login</span>
-                            </a>
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#data-nav" data-bs-toggle="collapse" href="#">
+                    <i class="bi bi-menu-button-wide"></i><span>Data</span><i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="data-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a href="components-alerts.html">
+                            <i class="bi bi-circle"></i><span>Jadwal Mengajar</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/tentor-datamurid">
+                            <i class="bi bi-circle"></i><span>Data Daftar Siswa</span>
+                        </a>
+                    </li>
+                </ul>
+            </li><!-- End Mengajar Nav -->
 
-                            @if (Route::has('register'))
-                                <a href="{{ route('register') }}"class="nav-link collapsed">
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#tugas-nav" data-bs-toggle="collapse" href="#">
+                    <i class="bi bi-menu-button-wide"></i><span>Mengajar</span><i
+                        class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="tugas-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a href="components-alerts.html">
+                            <i class="bi bi-circle"></i><span>Tugas</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="components-alerts.html">
+                            <i class="bi bi-circle"></i><span>Materi</span>
+                        </a>
+                    </li>
+                </ul>
+            </li><!-- End Mengajar Nav -->
+
+            <br>
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#akun-nav" data-bs-toggle="collapse" href="#">
+                    <i class="bi bi-menu-button-wide"></i><span>Account</span><i
+                        class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="akun-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li>
+                        @if (Route::has('login'))
+                            @auth
+                                <a href="{{ url('/profile') }}" class="nav-link collapsed">
                                     <i class bi bi-card-list></i>
-                                    <span>Register</span>
+                                    Profile
                                 </a>
-                            @endif
-                        @endauth
-                    </div>
-                @endif
-            </div>
+                            @else
+                                <a href="{{ route('login') }}" class="nav-link collapsed">
+                                    <i class bi bi-box-arrow-in-right></i>
+                                    <span>Login</span>
+                                </a>
+
+                                @if (Route::has('register'))
+                                    <a href="{{ route('register') }}"class="nav-link collapsed">
+                                        <i class bi bi-card-list></i>
+                                        <span>Register</span>
+                                    </a>
+                                @endif
+                            @endauth
+                        @endif
+                    </li>
+                    <li>
+                        <a href="components-alerts.html">
+                            <i class="bi bi-circle"></i><span>Tarik Gaji</span>
+                        </a>
+                    </li>
+                </ul>
+            </li><!-- End Akun Nav -->
 
     </aside><!-- End Sidebar-->
 

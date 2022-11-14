@@ -20,6 +20,23 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 |
 */
 
+// Routing untuk Jetstream
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});
+
+
+
+
+// Routing Untuk Umum
+
 Route::get('/', function () {
     return view('general/berita');
 });
@@ -28,35 +45,11 @@ Route::get('/berita', function () {
     return view('general/berita');
 });
 
-
-
-Route::get('/admin-pendataan', function () {
-    return view('admin/pendataan');
-});
-
 Route::get('/profile', function () {
     return view('profile/show');
 });
 
 
-
-
-
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified'
-])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('admin/dashboard');
-    })->name('dashboard');
-});
-
-route::get('/berita',function()
-{
-return view('general/berita');
-}
-);
 
 
 
@@ -72,13 +65,19 @@ route::middleware('role:admin')->get('/admin-dashboard', function()
     return view ('admin/dashboard');
 })->name('homeAdmin');
 
-route::get('/admin-datamurid',[MuridController::class,'ShowDatamurid']); 
-route::get('/admin-datamurid',[MuridController::class,'TampilDatamurid']);
-route::post('/admin-datamurid',[MuridController::class,'AddDatamurid'])->name('murid_create');
-route::get('/admin-deletemurid/{id}',[MuridController::class,'HapusDatamurid']);
-route::get('/admin-datamapel',[MapelController::class,'ShowDatamapel']); 
 
 
+Route::middleware('role:admin')->get('/admin-datamurid',[MuridController::class,'ShowDatamurid']); 
+route::middleware('role:admin')->get('/admin-datamurid',[MuridController::class,'TampilDatamurid']);
+route::middleware('role:admin')->post('/admin-datamurid',[MuridController::class,'AddDatamurid'])->name('murid_create');
+route::middleware('role:admin')->get('/admin-deletemurid/{id}',[MuridController::class,'HapusDatamurid']);
+route::middleware('role:admin')->get('/admin-datamapel',[MapelController::class,'ShowDatamapel']); 
+
+
+
+
+
+// End Route Untuk Admin
 
 Auth::routes();
 
@@ -97,6 +96,10 @@ route::middleware('role:tentor')->get('/tentor-dashboard', function()
 
 
 
+route::middleware('role:tentor')->get('/tentor-datamurid',[MuridController::class,'TentorTampilDatamurid'])->name('tentor-datamurid');
+
+// End Route Untuk Tentor
+
 
 
 
@@ -112,5 +115,7 @@ route::middleware('role:user')->get('/user-dashboard', function()
 
 
 
+
+// End Route Untuk User
 
 

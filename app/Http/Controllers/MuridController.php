@@ -41,4 +41,11 @@ class MuridController extends Controller
         
     }
 
+        public function TentorTampilDatamurid()
+    {
+        $murids = Murid::orderBy('id','DESC')->get();
+        return view('tentor.datamurid', compact('murids'));
+    }
+
 }
+
