@@ -17,13 +17,14 @@ class RoleSeeder extends Seeder
      */
     public function run()
     {
+    
         Role::create([
-            'name' => 'tentor',
+            'name' => 'user',
             'guard_name' => 'web'
         ]);
 
         Role::create([
-            'name' => 'user',
+            'name' => 'tentor',
             'guard_name' => 'web'
         ]);
 

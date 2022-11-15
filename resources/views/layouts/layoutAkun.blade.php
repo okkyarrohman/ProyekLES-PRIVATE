@@ -98,24 +98,19 @@
                 <ul id="akun-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                     <li>
                         @if ('role:admin')
-                            @auth
-                                <a href="{{ url('/admin-dashboard') }}" class="nav-link collapsed">
-                                    <i class bi bi-card-list></i>
-                                    Dashboard Admin
+                            <a href="{{ url('/admin-dashboard') }}" class="nav-link collapsed">
+                                <span>Dashboard Admin</span>
+                            </a>
+                            @if ('role:tentor')
+                                <a href="{{ url('/tentor-dashboard') }}" class="nav-link collapsed">
+                                    <span>Dashboard tentor</span>
                                 </a>
-                                @if ('role:tentor')
-                                    <a href="{{ url('/tentor-dashboard') }}" class="nav-link collapsed">
-                                        <i class bi bi-card-list></i>
-                                        Dashboard Tentor
-                                    </a>
-                                @endif
                                 @if ('role:user')
                                     <a href="{{ url('/user-dashboard') }}" class="nav-link collapsed">
-                                        <i class bi bi-card-list></i>
-                                        Dashboard User
+                                        <span>Dashboard user</span>
                                     </a>
                                 @endif
-                            @endauth
+                            @endif
                         @endif
                     </li>
                 </ul>

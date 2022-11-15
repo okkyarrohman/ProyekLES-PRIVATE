@@ -121,7 +121,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="components-alerts.html">
+                        <a href="/tentor-materi">
                             <i class="bi bi-circle"></i><span>Materi</span>
                         </a>
                     </li>

@@ -3,6 +3,7 @@
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MuridController;
 use App\Http\Controllers\MapelController;
+use App\Http\Controllers\MateriController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Livewire\Admin\Datamurid\Show;
@@ -77,6 +78,7 @@ route::middleware('role:admin')->get('/admin-datamapel',[MapelController::class,
 
 
 
+
 // End Route Untuk Admin
 
 Auth::routes();
@@ -86,7 +88,7 @@ Auth::routes();
 // Routing Untuk Tentor
 route::middleware('role:tentor')->get('/homeTentor', function()
 {
-    return view ('tentor/homeTentor');
+    return view ('tentor/tentor-dashboard');
 })->name('homeTentor');
 
 route::middleware('role:tentor')->get('/tentor-dashboard', function()
@@ -94,10 +96,9 @@ route::middleware('role:tentor')->get('/tentor-dashboard', function()
     return view ('tentor/tentor-dashboard');
 })->name('dsh');
 
-
+route::middleware('role:tentor')->get('/tentor-materi',[MateriController::class,'show']);
 
 route::middleware('role:tentor')->get('/tentor-datamurid',[MuridController::class,'TentorTampilDatamurid'])->name('tentor-datamurid');
-
 // End Route Untuk Tentor
 
 
@@ -111,7 +112,7 @@ route::get('/homeUser',[HomeController::class,'homeUser'])->name('homeUser');
 route::middleware('role:user')->get('/user-dashboard', function()
 {
     return view ('user/user-dashboard');
-})->name('dsh');
+});
 
 
 
