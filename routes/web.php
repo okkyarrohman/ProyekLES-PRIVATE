@@ -6,7 +6,6 @@ use App\Http\Controllers\MapelController;
 use App\Http\Controllers\MateriController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-use App\Http\Livewire\Admin\Datamurid\Show;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 
@@ -109,7 +108,7 @@ route::middleware('role:tentor')->get('/tentor-datamurid',[MuridController::clas
 //Routing Untuk User
 
 route::get('/homeUser',[HomeController::class,'homeUser'])->name('homeUser');
-route::middleware('role:user')->get('/user-dashboard', function()
+route::get('/user-dashboard', function()
 {
     return view ('user/user-dashboard');
 });
