@@ -22,6 +22,7 @@
     <!-- Template Main CSS File -->
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/admin.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/css/tentor.css') }}">
 
 
     <!-- Vendor CSS Files -->
