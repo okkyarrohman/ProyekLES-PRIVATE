@@ -1,0 +1,29 @@
+.row .mapel10 {
+    display: flex;
+    padding: 20px;
+    border-style: dashed;
+    border: 1px solid;
+    justify-content: space-around;
+    
+}
+
+.mapel10 div {
+    width: 200px;
+    height: 100px;
+}
+
+.mtk button {
+    width: 100px;
+    height: 100px;
+}
+
+.bin button {
+    width: 100px;
+    height: 100px;
+}
+
+.big button{
+    width: 100px;
+    height: 100px;
+}
+
