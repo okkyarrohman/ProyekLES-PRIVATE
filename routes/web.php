@@ -38,12 +38,14 @@ Route::middleware([
 // Routing Untuk Umum
 
 Route::get('/', function () {
-    return view('general/berita');
+    return view('general/homePage');
 });
 
-Route::get('/berita', function () {
-    return view('general/berita');
+Route::get('/index', function () {
+    return view('general/homePage');
 });
+
+
 
 Route::get('/profile', function () {
     return view('profile/show');
