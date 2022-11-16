@@ -4,6 +4,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MuridController;
 use App\Http\Controllers\MapelController;
 use App\Http\Controllers\MateriController;
+use App\Http\Controllers\TentorController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
@@ -74,7 +75,7 @@ route::middleware('role:admin')->get('/admin-datamurid',[MuridController::class,
 route::middleware('role:admin')->post('/admin-datamurid',[MuridController::class,'AddDatamurid'])->name('murid_create');
 route::middleware('role:admin')->get('/admin-deletemurid/{id}',[MuridController::class,'HapusDatamurid']);
 route::middleware('role:admin')->get('/admin-datamapel',[MapelController::class,'ShowDatamapel']); 
-
+route::middleware('role:admin')->get('/admin-datatentor',[TentorController::class,'ShowDatatentor']); 
 
 
 
