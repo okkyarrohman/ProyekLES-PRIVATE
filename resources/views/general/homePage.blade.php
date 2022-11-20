@@ -76,26 +76,11 @@
                             <a href="index.html">LES PRIVATE</a>
                         </div>
                     </div>
-                    <div class="col-sm-5">
-                        <ul class="social_icon text_align_right d_none">
-                            <li> <a href="Javascript:void(0)"><i class="fa fa-facebook-f"></i></a></li>
-                            <li> <a href="Javascript:void(0)"><i class="fa fa-twitter"></i></a></li>
-                            <li> <a href="Javascript:void(0)"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                            <li> <a href="Javascript:void(0)"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                            </li>
-                            <li> <a href="Javascript:void(0)"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-4">
-                        <ul class="email text_align_right">
-                            <li class="d_none"><a href="Javascript:void(0)"><i class="fa fa-user"
-                                        aria-hidden="true"></i></a></li>
-                            <li class="d_none"> <a href="Javascript:void(0)"><i class="fa fa-search"
-                                        style="cursor: pointer;" aria-hidden="true"></i></a> </li>
+                    <div class="col" style="text-align: right">
+                        <ul>
                             <li>
-                                <button class="openbtn" onclick="openNav()"><img
-                                        src="bt-template/images/menu_btn.png"></button>
+                                <button class="openbtn" onclick="openNav()"><img src="bt-template/images/menu_btn.png">
+                                </button>
                             </li>
                         </ul>
                     </div>
@@ -123,7 +108,7 @@
                                             <div class="col-md-6">
                                                 <div class="con_img">
                                                     <figure><img class="img_responsive"
-                                                            src="bt-template/images/top_img.png" alt="#" />
+                                                            src="bt-template/images/top_img2.png" alt="#" />
                                                     </figure>
                                                 </div>
                                             </div>
@@ -147,7 +132,7 @@
                                             <div class="col-md-6">
                                                 <div class="con_img">
                                                     <figure><img class="img_responsive"
-                                                            src="bt-template/images/top_img.png" alt="#" />
+                                                            src="bt-template/images/top_img1.png" alt="#" />
                                                     </figure>
                                                 </div>
                                             </div>
@@ -172,7 +157,7 @@
                                             <div class="col-md-6">
                                                 <div class="con_img">
                                                     <figure><img class="img_responsive"
-                                                            src="bt-template/images/top_img.png" alt="#" />
+                                                            src="bt-template/images/top_img3.png" alt="#" />
                                                     </figure>
                                                 </div>
                                             </div>

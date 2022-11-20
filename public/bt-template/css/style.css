@@ -254,7 +254,7 @@ header
 ---------------------------------------------------------------------*/
 
 header {
-     background: #0f132d;
+     background: #0C80B1;
      width: 100%;
      padding: 22px 30px;
      height: 96px;
@@ -333,7 +333,7 @@ ul.email li i {
      height: 100%;
      top: 0;
      left: 0;
-     background-color: #111;
+     background-color: #044e6e;
      overflow-x: hidden;
      transition: 0.5s;
      padding-top: 60px;
@@ -844,7 +844,7 @@ ul.email li i {
 }
 
 .Informa h3 {
-     color: #ffffff;
+     color: white;
      font-size: 25px;
      font-weight: bold;
      line-height: 21px;
@@ -854,7 +854,7 @@ ul.email li i {
 }
 
 .conta ul li a {
-     color: #a4a7ae;
+     color: white;
 }
 
 .conta ul li a i {

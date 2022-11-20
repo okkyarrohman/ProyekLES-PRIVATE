@@ -96,6 +96,7 @@
                 <th scope="col">Nama</th>
                 <th scope="col">Phone</th>
                 <th scope="col">Asal Sekolah</th>
+                <th scope="col">Umur</th>
                 <th scope="col">Action</th>
             </tr>
         </thead>
@@ -109,6 +110,7 @@
                     <td>{{ $datamurid->name }}</td>
                     <td>{{ $datamurid->phone }}</td>
                     <td>{{ $datamurid->sekolah }}</td>
+                    <td>{{ $datamurid->umur }}</td>
                     <td>
                         <a href="#" class="btn btn-primary">
                             <i class="bi bi-people"></i>
