@@ -1,20 +1,94 @@
-
-.container-icon {
-    width: 600px;
-    height: 110px;
-    /*border: 2px solid; */
-    box-sizing: border-box;
+.btn-grup-beranda{
     display: flex;
-
-
+    justify-content: left;
+    box-sizing: content-box;
+    
 }
-
-
-
-.container-icon div {
-    width: 500px;
-    height: 50px;
+.btn-grup-beranda button {
+    
     margin: 10px;
-    display: flex;
+    padding: 30px;
+    
 }
 
+.btn-grup-beranda i {
+    font-size: 40px;
+}
+
+/* Data Master */
+.btn-grup-data-master{
+    display: flex;
+    justify-content: left;
+    box-sizing: content-box;
+    
+}
+.btn-grup-data-master button {
+    
+    margin: 10px;
+    padding: 30px;
+    
+}
+
+.btn-grup-data-master i {
+    font-size: 40px;
+}
+
+.btn-grup-data-master a{
+    text-decoration: none;
+    color: white;
+    
+}
+.btn-grup-data-master a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+/*End Data Master */
+
+
+/* Jadwal */
+.btn-grup-jadwal{
+    display: flex;
+    justify-content: left;
+    box-sizing: content-box;
+    
+}
+.btn-grup-jadwal button {
+    
+    margin: 10px;
+    padding: 30px;
+    
+}
+
+.btn-grup-jadwal i {
+    font-size: 40px;
+}
+.btn-grup-jadwal a{
+    text-decoration: none;
+    color: white;
+    
+}
+
+.btn-grup-jadwal a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+/*End Jadwal */
+
+.btn-grup-lainnya{
+    display: flex;
+    justify-content: left;
+    box-sizing: content-box;
+    
+}
+.btn-grup-lainnya button {
+    
+    margin: 10px;
+    padding: 30px;
+    
+}
+
+.btn-grup-lainnya i {
+    font-size: 40px;
+}

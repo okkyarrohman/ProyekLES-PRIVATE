@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Murid;
+use App\Models\User;
 
 class MuridController extends Controller
 {
@@ -47,5 +48,44 @@ class MuridController extends Controller
         return view('tentor.datamurid', compact('murids'));
     }
 
+    
+    public function AddUserMurid(Request $request)
+    {
+        $murid = new User();
+        $murid->name = $request->name;
+        $murid->email = $request->email;
+        $murid->password = $request->password;
+        $murid->save();
+        return back()->with('murid_ditambah', 'murid telah ditambahkan');
+    }
+
+    public function tampilUserMurid()
+    {
+        $murids = User::orderBy('id','DESC')->get();
+        return view('admin.datamurid', compact('murids'));
+    }
+
+    public function HapusUserMurid($id)
+    {
+    User::where('id',$id)->delete();
+        return back()->with('murid_deleted','Data Murid Berhasil Dihapus');
+    }
+
+    public function EditUserMurid($id)
+    {
+        $murids = User::find($id);
+        return view('admin.datamurid', compact('murids')); 
+    }
+
+    public function UpdateUserMurid(Request $request)
+    {
+        $murids = User::find($request->id);
+        $murids->name = $request->name;
+        $murids->email = $request->email;
+        $murids->password = $request->bcrypt('password');
+        $murids->save();
+        return back()->with('murid_update', 'Murid Diupdate');
+    }
+    
 }
 

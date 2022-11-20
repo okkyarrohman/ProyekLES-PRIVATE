@@ -71,11 +71,13 @@ route::middleware('role:admin')->get('/admin-dashboard', function()
 
 
 Route::middleware('role:admin')->get('/admin-datamurid',[MuridController::class,'ShowDatamurid']); 
-route::middleware('role:admin')->get('/admin-datamurid',[MuridController::class,'TampilDatamurid']);
-route::middleware('role:admin')->post('/admin-datamurid',[MuridController::class,'AddDatamurid'])->name('murid_create');
-route::middleware('role:admin')->get('/admin-deletemurid/{id}',[MuridController::class,'HapusDatamurid']);
+route::middleware('role:admin')->get('/admin-datamurid',[MuridController::class,'tampilUsermurid']);
+route::middleware('role:admin')->post('/admin-datamurid',[MuridController::class,'AddUsermurid'])->name('murid_create');
+route::middleware('role:admin')->get('/admin-deletemurid/{id}',[MuridController::class,'HapusUserMurid']);
 route::middleware('role:admin')->get('/admin-datamapel',[MapelController::class,'ShowDatamapel']); 
 route::middleware('role:admin')->get('/admin-datatentor',[TentorController::class,'ShowDatatentor']); 
+route::middleware('role:admin')->get('/admin-editmurid/{id}',[MuridController::class,'EditUserMurid']);
+route::middleware('role:admin')->post('/admin-update-post',[MuridController::class,'UpdateUserMurid'])->name('user.update');
 
 
 

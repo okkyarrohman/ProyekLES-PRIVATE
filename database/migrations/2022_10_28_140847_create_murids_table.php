@@ -14,7 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('murids', function (Blueprint $table) {
-            $table->id();
+            $table->id('id');
+            $table->foreignId('users');
             $table->string('name');
             $table->string('phone');
             $table->string('sekolah');

@@ -16,7 +16,13 @@ class Murid extends Model
         'phone',
         'sekolah',
         'umur',
+        
     ];
 
     use HasFactory;
+
+    public function users()
+    {
+        return $this->belongsTo('App\Models\User');
+    }
 }

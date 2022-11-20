@@ -22,6 +22,8 @@
     <!-- Template Main CSS File -->
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/admin.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
 
     <!-- Vendor CSS Files -->
@@ -56,31 +58,11 @@
             <i class="bi bi-list toggle-sidebar-btn"></i>
         </div><!-- End Logo -->
 
-        <div class="search-bar">
-            <form class="search-form d-flex align-items-center" method="POST" action="#">
-                <input type="text" name="query" placeholder="Search" title="Enter search keyword">
-                <button type="submit" title="Search"><i class="bi bi-search"></i></button>
-            </form>
-        </div><!-- End Search Bar -->
-
-        <nav class="header-nav ms-auto">
-            <ul class="d-flex align-items-center">
-
-                <li class="nav-item d-block d-lg-none">
-                    <a class="nav-link nav-icon search-bar-toggle " href="#">
-                        <i class="bi bi-search"></i>
-                    </a>
-                </li><!-- End Search Icon-->
-
-
-            </ul>
-        </nav><!-- End Icons Navigation -->
 
     </header><!-- End Header -->
 
     <!-- ======= Sidebar ======= -->
     <aside id="sidebar" class="sidebar">
-
         <ul class="sidebar-nav" id="sidebar-nav">
 
             <li class="nav-item">
@@ -92,7 +74,7 @@
 
             <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
-                    <i class="bi bi-menu-button-wide"></i><span>Pendataan</span><i
+                    <i class="bi bi-menu-button-wide"></i><span>Data Master</span><i
                         class="bi bi-chevron-down ms-auto"></i>
                 </a>
                 <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
@@ -106,11 +88,12 @@
                             <i class="bi bi-circle"></i><span>Data Murid</span>
                         </a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="/admin-datamapel">
                             <i class="bi bi-circle"></i><span>Data Mapel</span>
                         </a>
                     </li>
+                -->
                     <li>
                         <a href="components-badges.html">
                             <i class="bi bi-circle"></i><span>Data Jadwal Bimbel</span>
@@ -121,21 +104,26 @@
 
             <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#keuangan-nav" data-bs-toggle="collapse" href="#">
-                    <i class="bi bi-menu-button-wide"></i><span>Keuangan</span><i
-                        class="bi bi-chevron-down ms-auto"></i>
+                    <i class="bi bi-menu-button-wide"></i><span>Jadwal</span><i class="bi bi-chevron-down ms-auto"></i>
                 </a>
                 <ul id="keuangan-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                     <li>
                         <a href="components-alerts.html">
-                            <i class="bi bi-circle"></i><span>Gaji Tutor</span>
+                            <i class="bi bi-circle"></i><span>Jadwal Tentor</span>
                         </a>
                     </li>
                     <li>
                         <a href="components-accordion.html">
-                            <i class="bi bi-circle"></i><span>Data Transaksi Pemesanan</span>
+                            <i class="bi bi-circle"></i><span>Jadwal Siswa</span>
                         </a>
                     </li>
                     <li>
+                        <a href="components-accordion.html">
+                            <i class="bi bi-circle"></i><span>Tambah Materi</span>
+                        </a>
+                    </li>
+                    <li>
+                        <!--
                         <a href="components-accordion.html">
                             <i class="bi bi-circle"></i><span>Data Transaksi Pembayaran</span>
                         </a>
@@ -145,22 +133,29 @@
                             <i class="bi bi-circle"></i><span>Paket Bimbel</span>
                         </a>
                     </li>
+                -->
                 </ul>
             </li><!-- End Keuangan Nav -->
 
             <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#tugas-nav" data-bs-toggle="collapse" href="#">
-                    <i class="bi bi-menu-button-wide"></i><span>Tugas</span><i class="bi bi-chevron-down ms-auto"></i>
+                    <i class="bi bi-menu-button-wide"></i><span>Lain Lain</span><i
+                        class="bi bi-chevron-down ms-auto"></i>
                 </a>
                 <ul id="tugas-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                     <li>
                         <a href="components-alerts.html">
-                            <i class="bi bi-circle"></i><span>Tugas</span>
+                            <i class="bi bi-circle"></i><span>Pemesanan</span>
                         </a>
                     </li>
                     <li>
                         <a href="components-accordion.html">
-                            <i class="bi bi-circle"></i><span>Materi</span>
+                            <i class="bi bi-circle"></i><span>Pembayaran</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="components-accordion.html">
+                            <i class="bi bi-circle"></i><span>Gaji Tentor</span>
                         </a>
                     </li>
                 </ul>
