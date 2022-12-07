@@ -58,6 +58,8 @@ Route::get('/profile', function () {
 
 
 
+
+
 // Roting Untuk Admin
 Route::get('/admin-dashboard', function () {
     return view('admin/dashboard');
@@ -78,6 +80,15 @@ route::middleware('role:admin')->get('/admin-datamapel',[MapelController::class,
 route::middleware('role:admin')->get('/admin-datatentor',[TentorController::class,'ShowDatatentor']); 
 route::middleware('role:admin')->get('/admin-editmurid/{id}',[MuridController::class,'EditUserMurid']);
 route::middleware('role:admin')->post('/admin-update-post',[MuridController::class,'UpdateUserMurid'])->name('user.update');
+
+route::middleware('role:admin')->get('/admin-materi',[MateriController::class,'showMateriAdmin']);
+route::middleware('role:admin')->get('/admin-materi-ipa',[MateriController::class,'showMateriAdminIPA']);
+route::middleware('role:admin')->post('/admin-materi-ipa',[MateriController::class,'addMateriAdminIPA'])->name(
+    'ipa.create'
+);
+route::middleware('role:admin')->get('/admin-materi-ipa/{foto}',[MateriController::class,'DownloadFile']);
+route::middleware('role:admin')->get('/admin-materi-ipa/{id}',[MateriController::class,'delete_file']);
+route::middleware('role:admin')->get('/admin-materi-ipa',[MateriController::class,'tampilMateriAdminIPA']);
 
 
 
@@ -112,10 +123,23 @@ route::middleware('role:tentor')->get('/tentor-datamurid',[MuridController::clas
 
 //Routing Untuk User
 
-route::get('/homeUser',[HomeController::class,'homeUser'])->name('homeUser');
-route::get('/user-dashboard', function()
+route::middleware('role:user')->get('/user-dashboard', function()
 {
     return view ('user/user-dashboard');
+});
+route::middleware('role:user')->get('/user-materi', function () {
+    return view('user/materi/user-materi');
+});
+route::middleware('role:user')->get('/user-materi-ipa', function () {
+    return view('user/materi/user-materi-ipa');
+});
+route::middleware('role:user')->get('/user-materi-ipa',[MateriController::class,'tampilMateriAdminIPAUser']);
+route::middleware('role:user')->get('/user-materi-ipa/{foto}',[MateriController::class,'DownloadFile']);
+route::middleware('role:user')->get('/user-materi-bin', function () {
+    return view('user/materi/user-materi-bin');
+});
+route::middleware('role:user')->get('/user-materi-big', function () {
+    return view('user/materi/user-materi-big');
 });
 
 
@@ -124,3 +148,13 @@ route::get('/user-dashboard', function()
 // End Route Untuk User
 
 
+Route::get('/user-materi', function () {
+    return view('user/materi/user-materi');
+});
+route::get('/user-materi-ipa',[MateriController::class,'tampilMateriAdminIPAUser']);
+route::get('/user-materi-ipa/{foto}',[MateriController::class,'DownloadFile']);
+
+route::get('/user-dashboard', function()
+{
+    return view ('user/user-dashboard');
+});

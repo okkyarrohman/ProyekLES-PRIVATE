@@ -84,7 +84,7 @@
         <ul class="sidebar-nav" id="sidebar-nav">
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="/berita">
+                <a class="nav-link collapsed" href="/">
                     <i class="bi bi-grid"></i>
                     <span>Berita</span>
                 </a>

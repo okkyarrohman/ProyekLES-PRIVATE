@@ -118,7 +118,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="components-accordion.html">
+                        <a href="/admin-materi">
                             <i class="bi bi-circle"></i><span>Tambah Materi</span>
                         </a>
                     </li>
@@ -212,7 +212,9 @@
         <script src="{{ asset('/js/simple-datatables/simple-datatables.js') }}"></script>
         <script src="{{ asset('/js/tinymce/tinymce.min.js') }}"></script>
         <script src="{{ asset('/js/php-email-form/validate.js') }}"></script>
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"
+            integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <!-- Template Main JS File -->
         <script type="text/javascript" src="{{ asset('/js/main.js') }}"></script>
 
@@ -222,9 +224,39 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
             integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous">
         </script>
+        @if (Session::has('materi_added'))
+            <script>
+                swal("Thanks!", "{!! session::get('materi_added') !!}", "success", {
+                    button: "Close",
+                })
+            </script>
+        @endif <!-- Materi Ditambahkan -->
 
+        @if (Session::has('murid_updated'))
+            <script>
+                swal("Thanks!", "{!! session::get('murid_updated') !!}", "success", {
+                    button: "Close",
+                })
+            </script>
+        @endif <!-- data murid Ditambahkan -->
 
+        @if (Session::has('murid_deleted'))
+            <script>
+                swal("Thanks!", "{!! session::get('murid_deleted') !!}", "warning", {
+                    button: "Close",
+                })
+            </script>
+        @endif
+        <!-- Notif Data Murid Dihapus-->
 
+        @if (Session::has('murid_ditambah'))
+            <script>
+                swal("Thanks!", "{!! session::get('murid_ditambah') !!}", "success", {
+                    button: "Close",
+                })
+            </script>
+        @endif <!-- Notif Data Murid Ditambahkan-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.min.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

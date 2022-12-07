@@ -82,9 +82,9 @@ class MuridController extends Controller
         $murids = User::find($request->id);
         $murids->name = $request->name;
         $murids->email = $request->email;
-        $murids->password = $request->bcrypt('password');
+        $murids->password = bcrypt('password');
         $murids->save();
-        return back()->with('murid_update', 'Murid Diupdate');
+        return back()->with('murid_updated', 'Murid Diupdate');
     }
     
 }

@@ -11,28 +11,7 @@
         </nav>
     </div><!-- End Page Title -->
 
-    @if (Session::has('murid_created'))
-        <div class="alert alert-success" role="alert">
-            {{ Session::get('murid_created') }}
-        </div>
-    @endif <!-- Notif Data Murid Ditambahkan-->
-
-    @if (Session::has('murid_deleted'))
-        <div class="alert alert-danger" role="alert">
-            {{ Session::get('murid_deleted') }}
-        </div>
-    @endif
-    <!-- Notif Data Murid Dihapus-->
-
-    @if (Session::has('murid_update'))
-        <div class="alert alert-succes" role="alert">
-            {{ Session::get('murid_update') }}
-        </div>
-    @endif
-    <!-- Notif Data Murid Diupdate-->
-
-
-    <!-- Button trigger modal -->
+    <!-- Button trigger modal-->
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tambah">
         Tambah Murid
     </button>
@@ -109,7 +88,7 @@
                                 <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
                                 <div class="col-sm-10">
                                     <input type="email" class="form-control" id="inputEmail"
-                                        placeholder="Masukkan No Telephone" name="email" value{{ $murid->email }}>
+                                        placeholder="Masukkan Email" name="email" value{{ $murid->email }}>
                                 </div>
                             </div>
                             <div class="row mb-3">

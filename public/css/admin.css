@@ -92,3 +92,64 @@
 .btn-grup-lainnya i {
     font-size: 40px;
 }
+
+
+
+/* Materi */
+
+.materi-10 {
+    width: 900px;
+    height: 200px;
+}
+
+.materi-grup {
+    width: 300px;
+    height: 100px;
+
+}
+
+.materi-btn {
+    width: 800px;
+    height: 150px;
+
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    box-sizing: content-box;
+    
+}
+
+.materi-btn i{
+    font-size: 40px;
+
+}
+
+.materi-btn button {
+    margin: 20px;
+}
+
+
+.materi-btn a{
+    text-decoration: none;
+    color: white;
+    
+}
+
+.materi-btn a:hover{
+    text-decoration: none;
+    color: white;
+}
+
+.materi-btn span{
+    font-size: medium;
+}
+
+
+
+
+
+
+
+
+
+

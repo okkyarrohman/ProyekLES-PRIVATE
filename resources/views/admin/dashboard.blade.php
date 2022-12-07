@@ -90,9 +90,11 @@
                 <div class="btn-1">
                     <a href="#">
                         <button class="btn btn-primary">
-                            <i class="bi bi-layout-text-window"></i>
-                            <br>
-                            <span>Tambah Materi</span>
+                            <a href="/admin-materi">
+                                <i class="bi bi-layout-text-window"></i>
+                                <br>
+                                <span>Tambah Materi</span>
+                            </a>
                     </a>
                     </button>
                 </div>
