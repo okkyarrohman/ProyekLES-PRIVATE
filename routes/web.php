@@ -5,6 +5,7 @@ use App\Http\Controllers\MuridController;
 use App\Http\Controllers\MapelController;
 use App\Http\Controllers\MateriController;
 use App\Http\Controllers\TentorController;
+use App\Models\Mapel;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
@@ -71,20 +72,35 @@ route::middleware('role:admin')->get('/admin-dashboard', function()
 })->name('homeAdmin');
 
 
-
+// Fitur Data Murid
 Route::middleware('role:admin')->get('/admin-datamurid',[MuridController::class,'ShowDatamurid']); 
 route::middleware('role:admin')->get('/admin-datamurid',[MuridController::class,'tampilUsermurid']);
 route::middleware('role:admin')->post('/admin-datamurid',[MuridController::class,'AddUsermurid'])->name('murid_create');
 route::middleware('role:admin')->get('/admin-deletemurid/{id}',[MuridController::class,'HapusUserMurid']);
-route::middleware('role:admin')->get('/admin-datamapel',[MapelController::class,'ShowDatamapel']); 
-route::middleware('role:admin')->get('/admin-datatentor',[TentorController::class,'ShowDatatentor']); 
+route::middleware('role:admin')->get('/admin-datamapel',[MapelController::class,'ShowDatamapel']);  
 route::middleware('role:admin')->get('/admin-editmurid/{id}',[MuridController::class,'EditUserMurid']);
 route::middleware('role:admin')->post('/admin-update-post',[MuridController::class,'UpdateUserMurid'])->name('user.update');
 
+// Fitur Data Tentor
+Route::middleware('role:admin')->get('/admin-datatentor',[TentorController::class,'getDataTentor']);
+Route::middleware('role:admin')->post('/admin-datatentor',[TentorController::class,'createDataTentor'])->name('tentor.create');
+Route::middleware('role:admin')->get('/admin-datatentor',[TentorController::class,'getDataTentor']);
+Route::middleware('role:admin')->get('/admin-deletetentor/{id}',[TentorController::class,'deleteTentor']);
+Route::middleware('role:admin')->get('/admin-edittentor/{id}',[TentorController::class,'editTentor']);
+Route::middleware('role:admin')->post('/admin-updatetentor',[TentorController::class,'updateTentor'])->name('tentor.update');
+
+// Fitur Data Mapel
+Route::middleware('role:admin')->get('admin-datamapel',[MapelController::class,'showDataMapel']);
+Route::middleware('role:admin')->post('/admin-datamapel',[MapelController::class,'createDataMapel'])->name('mapel.create');
+Route::middleware('role:admin')->get('/admin-datamapel',[MapelController::class,'getDataMapel']);
+Route::middleware('role:admin')->get('/admin-deletemapel/{id}',[MapelController::class,'deleteMapel']);
+Route::middleware('role:admin')->get('/admin-editmapel/{id}',[MapelController::class,'editMapel']);
+Route::middleware('role:admin')->post('/admin-updatemapel',[MapelController::class,'updateMapel'])->name('mapel.update');
+
+
 route::middleware('role:admin')->get('/admin-materi',[MateriController::class,'showMateriAdmin']);
 route::middleware('role:admin')->get('/admin-materi-ipa',[MateriController::class,'showMateriAdminIPA']);
-route::middleware('role:admin')->post('/admin-materi-ipa',[MateriController::class,'addMateriAdminIPA'])->name(
-    'ipa.create'
+route::middleware('role:admin')->post('/admin-materi-ipa',[MateriController::class,'addMateriAdminIPA'])->name('ipa.create'
 );
 route::middleware('role:admin')->get('/admin-materi-ipa/{foto}',[MateriController::class,'DownloadFile']);
 route::middleware('role:admin')->get('/admin-materi-ipa/{id}',[MateriController::class,'delete_file']);

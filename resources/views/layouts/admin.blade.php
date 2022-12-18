@@ -88,12 +88,11 @@
                             <i class="bi bi-circle"></i><span>Data Murid</span>
                         </a>
                     </li>
-                    <!-- <li>
+                    <li>
                         <a href="/admin-datamapel">
                             <i class="bi bi-circle"></i><span>Data Mapel</span>
                         </a>
                     </li>
-                -->
                     <li>
                         <a href="components-badges.html">
                             <i class="bi bi-circle"></i><span>Data Jadwal Bimbel</span>
@@ -197,8 +196,9 @@
     </aside><!-- End Sidebar-->
 
     <main id="main" class="main">
+    <body>
         @yield('admin')
-
+    </body>
 
         <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
                 class="bi bi-arrow-up-short"></i></a>
@@ -256,6 +256,33 @@
                 })
             </script>
         @endif <!-- Notif Data Murid Ditambahkan-->
+
+        @if (Session::has('tentor_created'))
+        <script>
+            swal("Thanks!", "{!! session::get('tentor_created') !!}", "success", {
+                button: "Close",
+            })
+        </script>
+    @endif <!-- Notif Data Tentor Ditambahkan-->
+
+    @if (Session::has('tentor_deleted'))
+    <script>
+        swal("Thanks!", "{!! session::get('tentor_deleted') !!}", "warning", {
+            button: "Close",
+        })
+    </script>
+    @endif
+    <!-- Notif Data Tentor Dihapus-->
+
+    @if (Session::has('tentor_updated'))
+    <script>
+        swal("Thanks!", "{!! session::get('tentor_updated') !!}", "warning", {
+            button: "Close",
+        })
+    </script>
+    @endif
+    <!-- Notif Data Tentor Diedit-->
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.min.js" crossorigin="anonymous"></script>
 </body>
 
