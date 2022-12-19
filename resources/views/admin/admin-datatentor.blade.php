@@ -32,6 +32,27 @@
                 <form method="POST" action="{{ Route('tentor.create') }}">
                     @csrf
                     <div class="row mb-3">
+                        <label for="name" class="col-sm-2 col-form-label">Nama Lengkap</label>
+                        <div class="col-sm-10">
+                            <input type="text"class="form-control" id="name" placeholder="Masukkan Nama"
+                                name="name">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="email" class="col-sm-2 col-form-label">Email</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" id="email"
+                                placeholder="Masukkan email" name="email">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="password" class="col-sm-2 col-form-label">Password</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="password"
+                                placeholder="Masukkan Password" name="password">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
                         <label for="mobile" class="col-sm-2 col-form-label">No. Telp</label>
                         <div class="col-sm-10">
                             <input type="tel" min="16" max="50" class="form-control" id="mobile" placeholder="Masukkan No. Telp"
@@ -75,7 +96,7 @@
     <div class="modal-dialog modal-md">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="staticBackdropLabel">Tambah Data Tentor Baru</h1>
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Edit Data Tentor Baru</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
 
@@ -83,7 +104,29 @@
             <div class="modal-body">
                 <form method="POST" action="{{ route('tentor.update') }} ">
                     @csrf
+                    
                     <input type="hidden" name="id" value="{{ $tentor->id }}" />
+                    <div class="row mb-3">
+                        <label for="name" class="col-sm-2 col-form-label">Nama Lengkap</label>
+                        <div class="col-sm-10">
+                            <input type="text"class="form-control" id="name" placeholder="Masukkan Nama"
+                                name="name" value="{{ $tentor->name }}"">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="email" class="col-sm-2 col-form-label">Email</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" id="email"
+                                placeholder="Masukkan email" name="email" value="{{ $tentor->email }}"">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="password" class="col-sm-2 col-form-label">Password</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="password"
+                                placeholder="Masukkan Password" name="password" value="{{ $tentor->password }}"">
+                        </div>
+                    </div>
                     <div class="row mb-3">
                         <label for="mobile" class="col-sm-2 col-form-label">No. Telp</label>
                         <div class="col-sm-10">
@@ -122,64 +165,14 @@
 </div>
 @endforeach
 
-<!-- Modal Edit Data-->
-{{-- @foreach($data as $datatentor)
-<div class="modal fade" id="edit" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-md">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="staticBackdropLabel">Edit Data Tentor</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-
-            <!-- Tambah Edit Form -->
-            <div class="modal-body">
-                <form method="POST" action="">
-                    @csrf
-                    <input type="hidden" name="id" value="{{ $datatentor->id }}" />
-                    <div class="row mb-3">
-                        <label for="mobile" class="col-sm-2 col-form-label">No. Telp</label>
-                        <div class="col-sm-10">
-                            <input type="text"  min="16" max="50" class="form-control" id="mobile" placeholder="Masukkan No. telp"
-                                name="mobile" value="{{ $datatentor->mobile }}">
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <label for="gender" class="col-sm-2 col-form-label">Jenis Kelamin</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="gender"
-                                placeholder="Masukkan Jenis Kelamin" name="gender" value="{{ $datatentor->gender }}">
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <label for="birthday" class="col-sm-2 col-form-label">Tanggal Lahir</label>
-                        <div class="col-sm-10">
-                            <input type="date" class="form-control" id="birthday"
-                                placeholder="Masukkan Tanggal Lahir" name="birthday" value="{{ $datatentor->birthday }}">
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <label for="address" class="col-sm-2 col-form-label">Alamat</label>
-                        <div class="col-sm-10">
-                            <textarea type="text" class="form-control" id="address" class="form-control" rows="3" placeholder="Masukkan Alamat Saat Ini" name="address" value="{{ $datatentor->address }}"></textarea>
-                        </div>
-                    </div>
-            </div><!-- Button Submit -->
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
-            </form><!-- End Horizontal Form -->
-        </div>
-    </div>
-</div>
-@endforeach --}}
 
 <div class="table" style="padding-top:20px;">
     <table class="table table-hover">
         <thead>
             <tr>
                 <th scope="col">No</th>
+                <th scope="col">Nama Lengkap</th>
+                <th scope="col">Email</th>
                 <th scope="col">No. Telp</th>
                 <th scope="col">Jenis Kelamin</th>
                 <th scope="col">Tanggal Lahir</th>
@@ -194,6 +187,8 @@
             @foreach ($tentors as $tentor)
             <tr>
                 <td>{{ $no++ }}</td>
+                <td>{{ $tentor->name }}</td>
+                <td>{{ $tentor->email }}</td>
                 <td>{{ $tentor->mobile }}</td>
                 <td>{{ $tentor->gender }}</td>
                 <td>{{ $tentor->birthday }}</td>

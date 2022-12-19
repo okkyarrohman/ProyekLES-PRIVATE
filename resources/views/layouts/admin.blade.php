@@ -242,7 +242,7 @@
 
         @if (Session::has('murid_deleted'))
             <script>
-                swal("Thanks!", "{!! session::get('murid_deleted') !!}", "warning", {
+                swal("Thanks!", "{!! session::get('murid_deleted') !!}", "success", {
                     button: "Close",
                 })
             </script>
@@ -263,25 +263,52 @@
                 button: "Close",
             })
         </script>
-    @endif <!-- Notif Data Tentor Ditambahkan-->
+        @endif <!-- Notif Data Tentor Ditambahkan-->
 
-    @if (Session::has('tentor_deleted'))
-    <script>
-        swal("Thanks!", "{!! session::get('tentor_deleted') !!}", "warning", {
-            button: "Close",
-        })
-    </script>
-    @endif
-    <!-- Notif Data Tentor Dihapus-->
+        @if (Session::has('tentor_deleted'))
+        <script>
+            swal("Thanks!", "{!! session::get('tentor_deleted') !!}", "success", {
+                button: "Close",
+            })
+        </script>
+        @endif
+        <!-- Notif Data Tentor Dihapus-->
 
-    @if (Session::has('tentor_updated'))
-    <script>
-        swal("Thanks!", "{!! session::get('tentor_updated') !!}", "warning", {
-            button: "Close",
-        })
-    </script>
-    @endif
-    <!-- Notif Data Tentor Diedit-->
+        @if (Session::has('tentor_updated'))
+        <script>
+            swal("Thanks!", "{!! session::get('tentor_updated') !!}", "success", {
+                button: "Close",
+            })
+        </script>
+        @endif
+        <!-- Notif Data Tentor Diedit-->
+
+        
+        @if (Session::has('mapel_created'))
+        <script>
+            swal("Thanks!", "{!! session::get('mapel_created') !!}", "success", {
+                button: "Close",
+            })
+        </script>
+        @endif <!-- Notif Data Tentor Ditambahkan-->
+
+        @if (Session::has('mapel_deleted'))
+        <script>
+            swal("Thanks!", "{!! session::get('mapel_deleted') !!}", "success", {
+                button: "Close",
+            })
+        </script>
+        @endif
+        <!-- Notif Data Tentor Dihapus-->
+
+        @if (Session::has('mapel_updated'))
+        <script>
+            swal("Thanks!", "{!! session::get('mapel_updated') !!}", "success", {
+                button: "Close",
+            })
+        </script>
+        @endif
+        <!-- Notif Data Tentor Diedit-->
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.min.js" crossorigin="anonymous"></script>
 </body>

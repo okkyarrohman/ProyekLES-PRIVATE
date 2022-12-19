@@ -15,8 +15,10 @@ class TentorController extends Controller
 
     public function createDataTentor(Request $request)
     {
-        $users = new User();
         $tentor = new Tentor();
+        $tentor->name = $request->name;
+        $tentor->email = $request->email;
+        $tentor->password = bcrypt('password');
         $tentor->mobile = $request->mobile;
         $tentor->gender = $request->gender;
         $tentor->birthday = $request->birthday;
@@ -46,6 +48,9 @@ class TentorController extends Controller
     public function updateTentor(Request $request)
     {
         $tentors = Tentor::find($request->id);
+        $tentors->name = $request->name;
+        $tentors->email = $request->email;
+        $tentors->password =$request->password;
         $tentors->mobile = $request->mobile;
         $tentors->gender = $request->gender;
         $tentors->birthday = $request->birthday;

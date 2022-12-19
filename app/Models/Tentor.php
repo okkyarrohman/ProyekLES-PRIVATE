@@ -12,6 +12,9 @@ class Tentor extends Model
     protected $table = "tentors";
 
     protected $fillable = [
+        'name',
+        'email',
+        'password',
         'mobile',
         'gender',
         'birthday',
