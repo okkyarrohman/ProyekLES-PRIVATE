@@ -18,7 +18,7 @@
     <link
         href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
         rel="stylesheet">
-
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
     <!-- Template Main CSS File -->
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/berita.css') }}">
@@ -62,7 +62,28 @@
     <!-- Template Main JS File -->
     <script type="text/javascript" src="{{ asset('/js/main.js') }}"></script>
 
+    <script>
+        function onSuccess(googleUser) {
+            console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+        }
 
+        function onFailure(error) {
+            console.log(error);
+        }
+
+        function renderButton() {
+            gapi.signin2.render('my-signin2', {
+                'scope': 'profile email',
+                'width': 240,
+                'height': 50,
+                'longtitle': true,
+                'theme': 'dark',
+                'onsuccess': onSuccess,
+                'onfailure': onFailure
+            });
+        }
+    </script>
+    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
 
 </body>
 

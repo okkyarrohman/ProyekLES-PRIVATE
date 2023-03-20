@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MuridController;
 use App\Http\Controllers\MapelController;
@@ -73,11 +74,11 @@ route::middleware('role:admin')->get('/admin-dashboard', function()
 
 
 // Fitur Data Murid
-Route::middleware('role:admin')->get('/admin-datamurid',[MuridController::class,'ShowDatamurid']); 
+Route::middleware('role:admin')->get('/admin-datamurid',[MuridController::class,'ShowDatamurid']);
 route::middleware('role:admin')->get('/admin-datamurid',[MuridController::class,'tampilUsermurid']);
 route::middleware('role:admin')->post('/admin-datamurid',[MuridController::class,'AddUsermurid'])->name('murid_create');
 route::middleware('role:admin')->get('/admin-deletemurid/{id}',[MuridController::class,'HapusUserMurid']);
-route::middleware('role:admin')->get('/admin-datamapel',[MapelController::class,'ShowDatamapel']);  
+route::middleware('role:admin')->get('/admin-datamapel',[MapelController::class,'ShowDatamapel']);
 route::middleware('role:admin')->get('/admin-editmurid/{id}',[MuridController::class,'EditUserMurid']);
 route::middleware('role:admin')->post('/admin-update-post',[MuridController::class,'UpdateUserMurid'])->name('user.update');
 
@@ -174,3 +175,7 @@ route::get('/user-dashboard', function()
 {
     return view ('user/user-dashboard');
 });
+
+
+//auth
+Route::get('auth/google',[GoogleController::class,'redirectToGoogle'])->name('google.login');
