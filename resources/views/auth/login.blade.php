@@ -1,6 +1,7 @@
 @extends('layouts.index-admin')
 @section('index-admin')
     <div class="main">
+
         <!-- Sing in  Form -->
         <section class="sign-in">
             <div class="container">
@@ -48,9 +49,13 @@
                                     </button>
                                 </div>
                         </form>
+                        <div class="button-google">
+                            <a class="btn btn-info" href="{{ route('google.login') }}">Login Google</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+    </div>
+    </section>
     </div>
 @endsection
